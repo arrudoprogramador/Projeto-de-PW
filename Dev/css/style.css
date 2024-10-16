@@ -1,0 +1,192 @@
+body {
+    background: linear-gradient(135deg, #1d2b64, #04c925);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-login {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 1000px;
+    width: 90%; /* Deixar flexível */
+    overflow: hidden;
+    margin: auto;
+}
+
+/* Área da esquerda com imagem */
+.left-login {
+    background: url('img/pegassus.png') no-repeat center center; /* Centraliza a imagem */
+    background-size: contain; /* Garante que a imagem seja exibida sem cortar */
+    width: 50%; /* Tamanho padrão para telas grandes */
+    height: 100%; /* Garante que a altura ocupe toda a div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left-login img {
+    max-width: 250px;
+    width: 100%;
+}
+
+/* Área do formulário à direita */
+.right-login {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textfield {
+    margin-bottom: 20px;
+}
+
+.textfield label {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #041b81, #5509a0);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+.btn-login:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    width: 100%;
+}
+
+/* Responsividade para tablets e celulares grandes */
+@media (max-width: 1024px) {
+    .main-login {
+        width: 95%; /* Reduzir o tamanho */
+    }
+
+    .left-login, .right-login {
+        width: 50%;
+    }
+
+    .right-login {
+        padding: 30px;
+    }
+}
+
+/* Responsividade para telas menores que 886px */
+@media (max-width: 886px) {
+    .main-login {
+        flex-direction: column; /* Alinhar as seções em coluna */
+        width: 100%;
+    }
+
+    .left-login {
+        width: 100%;
+        height: 250px; /* Altura da div da imagem */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: contain; /* Ajustar imagem dentro da div */
+        background-position: center;
+    }
+
+    .left-login img {
+        max-width: 200px; /* Tamanho máximo da imagem */
+        width: auto; /* Manter a proporção da imagem */
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .main-login {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-login {
+        width: 100%;
+        height: 250px; /* Ajustar altura para imagem */
+        background-size: cover; /* Preencher área da esquerda */
+    }
+
+    .right-login {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Responsividade para dispositivos móveis pequenos */
+@media (max-width: 480px) {
+    .main-login {
+        width: 100%; /* Usar toda a largura */
+    }
+
+    .left-login {
+        height: 200px; /* Reduzir altura da imagem */
+    }
+
+    .right-login {
+        padding: 15px;
+    }
+
+    .btn-login {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .textfield label {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+}
