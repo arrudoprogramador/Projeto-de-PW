@@ -1,0 +1,91 @@
+
+body {
+    background: linear-gradient(135deg, #1d2b64, #04c925);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-login {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 1000px;
+    width: 90%; 
+    overflow: hidden;
+    margin: auto;
+}
+
+.left-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #f7f7f7;
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+}
+
+.left-login img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Área do formulário à direita */
+.right-login {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-login h1 {
+    color: #1d2b64;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.textfield {
+    margin-bottom: 20px;
+}
+
+.textfield label {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #041b81, #5509a0);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+.btn-login:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
