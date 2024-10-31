@@ -1,0 +1,76 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2f51d6;
+    font-family: Arial, sans-serif;
+}
+
+.logo img {
+    height: 80px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white; /* Cor do texto em branco */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #1b9b6c; /* Verde para hover */
+    color: white; /* Garantir que o texto continue branco */
+}
+
+.nav-links a.active {
+    background-color: #1b9b6c; /* Verde ativo */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333; /* Cor de fundo no mobile */
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-links li {
+        margin: 10px 20px;
+    }
+
+    .navbar .burger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+    }
+
+    .nav-active {
+        display: flex; /* Exibe o menu no mobile quando ativado */
+    }
+}
